@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4'];
 
@@ -46,3 +47,7 @@ export default function Wheel({ options, rotation }) {
     </div>
   );
 }
+Wheel.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  rotation: PropTypes.number.isRequired,
+};

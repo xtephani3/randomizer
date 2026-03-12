@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Coin({ result, isFlipping }) {
   // If result is 'Heads', we stop at 0deg. If 'Tails', stop at 180deg.
@@ -34,3 +35,8 @@ export default function Coin({ result, isFlipping }) {
     </div>
   );
 }
+
+Coin.propTypes = {
+  result: PropTypes.oneOf(['Heads', 'Tails']).isRequired,
+  isFlipping: PropTypes.bool.isRequired,
+};
