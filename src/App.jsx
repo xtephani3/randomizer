@@ -12,10 +12,7 @@ function App() {
 
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // Wheel State
   const [rotation, setRotation] = useState(0);
-
-  // Coin State
   const [coinResult, setCoinResult] = useState('Heads');
 
   const [winner, setWinner] = useState(null);
