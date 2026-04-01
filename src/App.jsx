@@ -101,8 +101,8 @@ function App() {
     <div className="min-h-screen bg-slate-900 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] text-white font-sans selection:bg-purple-500/30 overflow-x-hidden">
 
       <header className="pt-12 pb-6 px-6 text-center max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-tr from-purple-400 via-pink-400 to-amber-300 drop-shadow-sm mb-4">
-          The Randomizer
+        <h1 className="text-4xl md:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-purple-400 drop-shadow-sm mb-4">
+          Spin the wheel
         </h1>
         <p className="text-slate-400 md:text-lg mb-8 max-w-lg mx-auto leading-relaxed">
           Can't decide? Let fate take the wheel... or flip the coin.
