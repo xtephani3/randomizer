@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   const [mode, setMode] = useState('wheel');
-  const [options, setOptions] = useState(['Pizza', 'Sushi', 'Burgers', 'Tacos', 'Thai']);
+  const [options, setOptions] = useState(['Pizza', 'Sharwama', 'rice', 'noodles', 'swallow']);
   const [inputValue, setInputValue] = useState('');
 
   const [isAnimating, setIsAnimating] = useState(false);
@@ -94,7 +94,7 @@ function App() {
       setWinner(result);
       setIsAnimating(false);
       triggerConfetti();
-    }, 3000); // 3s matches our coinFlip animation duration
+    }, 3000); 
   };
 
   return (
@@ -111,14 +111,14 @@ function App() {
         <div className="inline-flex items-center p-1 bg-slate-800/80 rounded-2xl border border-slate-700 backdrop-blur-md shadow-xl mb-6">
           <button
             onClick={() => setMode('wheel')}
-            className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${mode === 'wheel' ? 'bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-700/50'}`}
+            className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${mode === 'wheel' ? 'bg-purple-500 text-white shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-700/50'}`}
           >
             <CircleDashed className="w-5 h-5" />
             Wheel
           </button>
           <button
             onClick={() => setMode('coin')}
-            className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${mode === 'coin' ? 'bg-gradient-to-r from-amber-400 to-orange-500 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-700/50'}`}
+            className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${mode === 'coin' ? 'bg-purple-500 text-slate-900 shadow-lg' : 'text-slate-400 hover:text-white hover:bg-slate-700/50'}`}
           >
             <Coins className="w-5 h-5" />
             Coin
@@ -149,9 +149,9 @@ function App() {
           <button
             onClick={mode === 'wheel' ? spinWheel : flipCoin}
             disabled={isAnimating || (mode === 'wheel' && options.length === 0)}
-            className="mt-12 group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white transition-all duration-300 bg-gradient-to-b from-white/10 to-transparent border border-white/20 rounded-full hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 overflow-hidden shadow-[0_0_40px_rgba(168,85,247,0.3)] hover:shadow-[0_0_60px_rgba(168,85,247,0.6)]"
+            className="mt-12 group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white  bg-purple-500 border border-white/20 rounded-full disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-90 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-purple-500 opacity-90" />
             <span className="relative text-xl uppercase tracking-wider drop-shadow-md">
               {isAnimating ? 'Deciding...' : mode === 'wheel' ? 'Spin the Wheel' : 'Flip the Coin'}
             </span>

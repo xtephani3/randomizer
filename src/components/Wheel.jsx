@@ -7,7 +7,7 @@ export default function Wheel({ options, rotation }) {
   const sliceSize = 360 / Math.max(options.length, 1);
 
   return (
-    <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto rounded-full border-4 border-white/30 shadow-[0_0_30px_rgba(168,85,247,0.5)] overflow-hidden">
+    <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto rounded-full border-4 border-white/30  overflow-hidden">
       <div 
         className="w-full h-full rounded-full wheel-spin"
         style={{ 
